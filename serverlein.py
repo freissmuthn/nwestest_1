@@ -16,7 +16,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         with conn:
             data = conn.recv(1024)
             #if not data: break
-            outdata = "HTTP/1.1 200 OK\r\n\r\n<html><body><h1>Hi BULME</h1></body></html>"
+            outdata = "HTTP/1.1 200 OK\r\n\r\n<html><body><h1>Hi BULME an </h1></body></html>" +str (addr)
             antwort = outdata.encode()
             #print('Connected by', addr)
             print("Serverantwort:", antwort, "an", addr)
